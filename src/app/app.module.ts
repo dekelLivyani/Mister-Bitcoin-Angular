@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 import { GoogleChartsModule } from 'angular-google-charts';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,10 +13,11 @@ import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.com
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
-import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
 import { MoveListComponent } from './cmps/move-list/move-list.component';
+import { AllMoveListComponent } from './pages/all-move-list/all-move-list.component';
+import { ChartsComponent } from './cmps/charts/charts.component';
 
 @NgModule({
    declarations: [
@@ -27,16 +29,18 @@ import { MoveListComponent } from './cmps/move-list/move-list.component';
       ContactFilterComponent,
       ContactDetailsComponent,
       ContactPageComponent,
-      StatisticsComponent,
       ContactEditComponent,
       TransferFundComponent,
-      MoveListComponent
+      MoveListComponent,
+      AllMoveListComponent,
+      ChartsComponent
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
       FormsModule,
-      GoogleChartsModule
+      GoogleChartsModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [AppComponent]

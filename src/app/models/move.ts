@@ -1,4 +1,4 @@
-import { Contact } from "../services/contact.model";
+import { Contact } from "./contact";
 export interface Move {
    _id?: string
    to: Contact,

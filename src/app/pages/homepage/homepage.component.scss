@@ -2,25 +2,25 @@
    display: flex;
    align-items: flex-start;
    justify-content: space-around;
-   // flex-wrap: wrap;
    .info{
-      // margin: 0 auto;
-      width: 300px;
-      height: 200px;
-      box-shadow: 0px 0 3px 2px #414141;
-      display: flex;
-      flex-direction: column;
-      gap:20px;
-      padding: 15px;
-      & >*{
-         &.title{
-            font-size: 1.3rem;
-         }
+      .status{
+         width: 350px;
+         height: fit-content;
+         box-shadow: 0px 0 3px 2px #414141;
          display: flex;
-         align-items: center;
-         gap:10px;
-         & img{
-            height: 35px;
+         flex-direction: column;
+         gap:20px;
+         padding: 15px;
+         & >*{
+            &.title{
+               font-size: 1.3rem;
+            }
+            display: flex;
+            align-items: center;
+            gap:10px;
+            & img{
+               height: 35px;
+            }
          }
       }
    }

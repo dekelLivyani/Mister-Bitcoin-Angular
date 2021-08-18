@@ -13,11 +13,6 @@ body{
    min-height: 100vh;
    background-color: rgb(36, 36, 36);
    color:white;
-   display: grid;
-   grid-template-columns: 1rem 1fr 1rem;
-   & * {
-     grid-column: 2;
-   }
 }
 img {
    max-width: 100%;

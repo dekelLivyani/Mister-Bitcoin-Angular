@@ -20,8 +20,8 @@
          <p><span>Email: </span>{{contact.email}}</p>
          <p><span>Phone: </span>{{contact.phone}}</p>
          <app-transfer-fund [contactToTransfer]="contact"></app-transfer-fund>
+         <app-move-list class="list-moves" [moves]="movesByContact"></app-move-list>
       </div>
-      <app-move-list [moves]="movesByContact"></app-move-list>
    </div>
 </section>
 <ng-template #loading>

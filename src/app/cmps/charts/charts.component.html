@@ -1,0 +1,19 @@
+<section class="charts">
+   <google-chart #chart  
+   *ngIf="marketPrice"
+   [width]="350"
+   [title]="marketPrice.title"
+   [type]="marketPrice.type"
+   [data]="marketPrice.data"
+   [options]="marketPrice.options"> 
+</google-chart>  
+
+<google-chart #chart  
+*ngIf="confirmedTransactions"
+[width]="350"
+[title]="confirmedTransactions.title"
+[type]="confirmedTransactions.type"
+[data]="confirmedTransactions.data"
+[options]="confirmedTransactions.options"> 
+</google-chart>  
+</section>

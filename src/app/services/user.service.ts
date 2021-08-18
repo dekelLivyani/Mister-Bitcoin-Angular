@@ -3,7 +3,7 @@ import { utilService } from './util.service';
 import { Move } from '../models/move';
 import { User } from '../models/user';
 import { BehaviorSubject } from 'rxjs';
-import { Contact } from './contact.model';
+import { Contact } from '../models/contact';
 
 const KEY_Users = 'users';
 const KEY_LoggedInUser = 'loggedInUser';

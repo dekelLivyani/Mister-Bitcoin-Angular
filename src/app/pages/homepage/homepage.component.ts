@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Move } from 'src/app/models/move';
 import { User } from 'src/app/models/user';
 import { BitcoinService } from 'src/app/services/bitcoin.service';
 import { UserService } from 'src/app/services/user.service';
@@ -22,7 +21,6 @@ export class HomepageComponent implements OnInit {
    userName: string;
    bitcoinVal: number = null;
    subscription: Subscription;
-   lastMoves: Move[];
    async onLogin() {
       this.userService.login(this.userName)
       this.userName = '';
@@ -37,10 +35,6 @@ export class HomepageComponent implements OnInit {
       this.subscription = this.userService.loggedInUser$.subscribe((user) => {
          this.loggedinUser = user;
          this.cd.markForCheck();
-         if (this.loggedinUser) {
-            this.lastMoves = this.loggedinUser.moves.slice(
-               this.loggedinUser.moves.length - 3, this.loggedinUser.moves.length)
-         }
       })
       try {
          if (this.loggedinUser) this.bitcoinVal = await this.bitcoinService.getRate(this.loggedinUser.coins)

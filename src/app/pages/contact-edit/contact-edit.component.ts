@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Contact } from 'src/app/services/contact.model';
+import { Contact } from 'src/app/models/contact';
 import { ContactService } from 'src/app/services/contact.service';
 
 @Component({

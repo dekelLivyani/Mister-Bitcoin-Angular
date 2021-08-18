@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, of } from 'rxjs';
-import { Contact } from './contact.model';
+import { Contact } from '../models/contact';
 import { utilService } from './util.service';
 
 const CONTACTS = [
@@ -186,7 +186,7 @@ export class ContactService {
 
    private _addContact(contact: Contact) {
       //mock the server work
-      const newContact = new Contact('', contact.name, contact.email, contact.phone);
+      const newContact = {...contact}
       newContact._id = utilService.makeId()
       this._contactsDb.push(newContact)
       utilService.save('CONTACTS', this._contactsDb)

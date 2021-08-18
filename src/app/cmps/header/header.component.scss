@@ -12,11 +12,26 @@
    }
    nav{
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap:5px;
+      flex-direction: column;
+      gap:20px;
+      position: fixed;
+      top:60px;
+      right: 0;
+      background-color: rgb(78, 78, 78);
+      padding: 15px;
+      width: 200px;
+      height: 40vh;
+      z-index: 20;
+      transition: transform .5s;
+      transform: translateX(100%);
+      .space{
+         display: none;
+      }
+      &.is-menu-open{
+         transform: translateX(0);
+         transition: transform .5s;
+      }
       & a,.logout{
-         padding: 7px;
          font-size: 1.3rem;
          text-decoration: none;
          color:white;
@@ -24,6 +39,48 @@
          &.active{
             color:rgb(248, 113, 113)
          }
+      }
+      @media (min-width:610px){
+         position:unset;
+         height:unset;
+         width:unset;
+         background-color:unset;
+         padding:unset;
+         transform:unset;
+         flex-direction: row;
+         align-items: center;
+         justify-content: flex-end;
+         gap:5px;
+         & a,.logout{
+            padding: 7px;
+         }
+         .space{
+            display: inline;
+         }
+      }
+   }
+   .menu-btn{
+      color:white;
+      & span{
+         font-size: 2rem;
+      }
+      @media (min-width:610px){
+         display: none;
+      }
+   }
+   .dark-window{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .4;
+      background-color: rgb(0, 0, 0);
+      z-index: 10;
+      cursor: pointer;
+      display: none;
+      &.isMenuOpen{
+         display: inline-block;
       }
    }
 }

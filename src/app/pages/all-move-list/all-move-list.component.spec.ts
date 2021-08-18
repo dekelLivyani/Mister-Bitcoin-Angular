@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StatisticsComponent } from './statistics.component';
+import { AllMoveListComponent } from './all-move-list.component';
 
-describe('StatisticsComponent', () => {
-  let component: StatisticsComponent;
-  let fixture: ComponentFixture<StatisticsComponent>;
+describe('AllMoveListComponent', () => {
+  let component: AllMoveListComponent;
+  let fixture: ComponentFixture<AllMoveListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatisticsComponent ]
+      declarations: [ AllMoveListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StatisticsComponent);
+    fixture = TestBed.createComponent(AllMoveListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

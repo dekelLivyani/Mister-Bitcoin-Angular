@@ -1,8 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { Contact } from 'src/app/models/contact';
 import { User } from 'src/app/models/user';
-import { Contact } from 'src/app/services/contact.model';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
