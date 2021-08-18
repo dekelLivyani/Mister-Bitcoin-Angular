@@ -7,13 +7,16 @@ import { UserService } from 'src/app/services/user.service';
 @Component({
    selector: 'app-header',
    template: `
-  <section class="header">
-     <a routerLink="" routerLinkActive="active"
-     [routerLinkActiveOptions]="{exact:true}">Home</a> |
-     <a routerLink="contact" routerLinkActive="active">Contact</a>
-     <section *ngIf="loggedinUser">
-        |<button class="simple-button logout"(click)="onLogout()">Logout</button>
-     </section>
+ <section class="header">
+     <img src="./assets/imgs/logo.png" alt="">
+     <nav>
+      <a routerLink="" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:true}">Home</a> |
+      <a routerLink="contact" routerLinkActive="active">Contact</a>
+      <section *ngIf="loggedinUser">
+         |<button class="simple-button logout"(click)="onLogout()">Logout</button>
+      </section>
+     </nav>
   </section>
   `,
    styleUrls: ['./header.component.scss'],
