@@ -1,0 +1,14 @@
+.contact-preview{
+   display: flex;
+   align-items: center;
+   gap:15px;
+   background-color: rgb(121, 121, 121);
+   font-size: 1.3rem;
+   color:black;
+   padding: 5px;
+   cursor: pointer;
+   border-radius: 5px;
+   img{
+      width: 40px;
+   }
+}
